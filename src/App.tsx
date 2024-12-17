@@ -32,7 +32,28 @@ const App: React.FC = () => {
           alignItems: "center",
         }}
       >
-        <Card variant="outlined" sx={{ maxWidth: 400, p: 2, mb: 4, mt: 2 }}>
+        <Card
+          variant="outlined"
+          sx={{
+            width: "50%",
+            minWidth: "300px",
+            margin: "2rem auto", // Centered with spacing
+            padding: "1.5rem",
+            boxShadow: "lg",
+            borderRadius: "12px",
+            backgroundColor: "white",
+            // Media query for smaller screens
+            "@media (max-width: 768px)": {
+              width: "100%", // Full width on small devices
+              margin: "0", // Remove margins
+              borderRadius: "0", // Remove rounded corners
+              position: "absolute", // Stick to the top
+              top: 0, // Align to the top
+              left: 0,
+              padding: "1rem", // Slightly smaller padding
+            },
+          }}
+        >
           <Stack spacing={2} alignItems="center">
             <Avatar
               src={"/praveshk.png"}
@@ -40,13 +61,13 @@ const App: React.FC = () => {
               sx={{ width: 100, height: 100 }}
             />
             <Box textAlign="center">
-              <Typography level="h3" sx={{ fontWeight: "bold" }}>
+              <Typography level="h1" sx={{ fontWeight: "bold" }}>
                 Pravesh Kunwar
               </Typography>
               <Typography level="body-lg" color="neutral">
-                CS & EE Minor @University of Michigan
+                <b>CS & EE Minor @University of Michigan</b>
               </Typography>
-              <Typography level="body-lg" color="neutral">
+              <Typography level="body-sm" color="neutral">
                 Novi, Michigan, United States
               </Typography>
             </Box>
@@ -118,7 +139,7 @@ const App: React.FC = () => {
                   <IconButton>
                     <SchoolIcon color="inherit" />
                   </IconButton>
-                </Tooltip>
+                </Tooltip>{" "}
               </Stack>
             </Box>
 
@@ -133,6 +154,14 @@ const App: React.FC = () => {
                 </JoyLink>
                 <JoyLink component={Link} to="/projects" color="primary">
                   Projects
+                </JoyLink>
+                {/* Opens PDF in a new tab */}
+                <JoyLink
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
                 </JoyLink>
                 <JoyLink component={Link} to="/misc" color="primary">
                   Misc

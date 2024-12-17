@@ -1,0 +1,96 @@
+:root {
+  font-family: "Inter", "Arial", sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #e0e7ff; /* Soft white-blue for text */
+  background-color: #121212; /* Midnight blue background */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #121212; /* Consistent dark background */
+  color: #e0e7ff;
+  padding: 1.5rem;
+}
+
+h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+  color: #a3b8ff; /* Subtle light blue for headers */
+  margin-bottom: 0.5rem;
+}
+
+h2,
+h3,
+h4 {
+  color: #c7d2fe; /* Slightly lighter blue for subheadings */
+  font-weight: 600;
+}
+
+a {
+  color: #4f80ff; /* Accent blue for links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #7faaff;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1.1em;
+  margin: 0.5rem 0;
+  color: #d6dff8; /* Soft light blue for text */
+}
+
+button {
+  background-color: #1b2e4b; /* Darker button background */
+  color: #e0e7ff;
+  border: 1px solid #4f80ff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2a3e5f;
+  border-color: #7faaff;
+}
+
+.resume-container {
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #0f1b36; /* Slightly brighter midnight blue */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}

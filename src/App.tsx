@@ -31,26 +31,25 @@ const App: React.FC = () => {
           flexDirection: "column",
           alignItems: "center",
         }}
+        className="card-container"
       >
         <Card
           variant="outlined"
           sx={{
             width: "50%",
             minWidth: "300px",
-            margin: "2rem auto", // Centered with spacing
+            margin: "2rem auto",
             padding: "1.5rem",
             boxShadow: "lg",
             borderRadius: "12px",
             backgroundColor: "white",
-            // Media query for smaller screens
             "@media (max-width: 768px)": {
-              width: "100%", // Full width on small devices
-              margin: "0", // Remove margins
-              borderRadius: "0", // Remove rounded corners
-              position: "absolute", // Stick to the top
-              top: 0, // Align to the top
-              left: 0,
-              padding: "1rem", // Slightly smaller padding
+              width: "100%",
+              margin: "0",
+              borderRadius: "0",
+              position: "relative",
+              top: "auto",
+              padding: "1rem",
             },
           }}
         >

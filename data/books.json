@@ -1,0 +1,36 @@
+{
+  "books": [
+    {
+      "name": "Meditations",
+      "author": "Marcus Aurelius (translated by Gregory Hays)",
+      "description": "Currently reading",
+      "rating": "N/A",
+      "url": "./meditations.jpg",
+      "link": "https://www.amazon.com/Meditations-New-Translation-Marcus-Aurelius/dp/0812968255"
+    },
+    {
+      "name": "How To Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "description": "Not reading",
+      "rating": "N/A",
+      "url": "./howtowin.jpg",
+      "link": "https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034"
+    },
+    {
+      "name": "The Millionare Next Door",
+      "author": "Thomas J. Stanley and William D. Danko",
+      "description": "Not reading",
+      "rating": "N/A",
+      "url": "./tmnd.jpg",
+      "link": "https://www.amazon.com/Millionaire-Next-Door-Surprising-Americas/dp/1589795474"
+    },
+    {
+      "name": "The 7 Habits of Highly Effective People",
+      "author": "Stephen R. Covey",
+      "description": "Not reading",
+      "rating": "N/A",
+      "url": "./7habits.jpg",
+      "link": "https://www.amazon.com/Habits-Highly-Effective-People-Powerful/dp/0743269519"
+    }
+  ]
+}

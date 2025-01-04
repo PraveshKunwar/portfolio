@@ -37,7 +37,7 @@ const App: React.FC = () => {
           variant="outlined"
           sx={{
             width: "50%",
-            minWidth: "300px",
+            minWidth: "900px",
             margin: "2rem auto",
             padding: "1.5rem",
             boxShadow: "lg",
@@ -45,6 +45,7 @@ const App: React.FC = () => {
             backgroundColor: "white",
             "@media (max-width: 768px)": {
               width: "100%",
+              minWidth: "300px",
               margin: "0",
               borderRadius: "0",
               position: "relative",

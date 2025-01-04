@@ -19,13 +19,14 @@ const Home: React.FC = () => {
       <section id="home-classes">
         <h2>Relevant Courses:</h2>
         <p className="home-classes-courses">
-          MATH 115: Calculus I, MATH 116: Calculus II, ECON 102: Principle Econ
-          II, EECS 183: Elementary Programming Concepts, EECS 203: Discrete
-          Math, EECS 280: Programming and Intro Data Structures, EECS 281: Data
-          Structures and Algorithms, EECS 370: Intro to Computer Orginization,
-          EECS 376: Foundations of Computer Science, EECS 481: Software
-          Engineering, EECS 485: Web Systems, EECS 492: Introduction to
-          Artificial Intelligence
+          <b>MATH 115</b>: Calculus I, <b>MATH 116</b>: Calculus II,{" "}
+          <b>ECON 102</b>: Principle Econ II, <b>EECS 183</b>: Elementary
+          Programming Concepts, <b>EECS 203</b>: Discrete Math, <b>EECS 280</b>:
+          Programming and Intro Data Structures, <b>EECS 281</b>: Data
+          Structures and Algorithms, <b>EECS 370</b>: Intro to Computer
+          Orginization, <b>EECS 376</b>: Foundations of Computer Science,{" "}
+          <b>EECS 481</b>: Software Engineering, <b>EECS 484</b>: Database
+          Systems, <b>EECS 485</b>: Web Systems
         </p>
       </section>
       <section id="home-skills"></section>

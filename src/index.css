@@ -19,8 +19,8 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: white; /* Consistent dark background */
-  color: black;
+  background-color: #1f1c1c; /* Consistent dark background */
+  color: white;
   padding: 1.5rem;
 }
 

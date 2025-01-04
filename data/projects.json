@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "name": "findBlue",
+      "description": "Developed a networking platform for University of Michigan students and professors to connect through research, projects, and internships, featuring a responsive React.js frontend, secure login, and Supabase-managed data storage.",
+      "link": "https://github.com/findBlueUofM/web",
+      "languagesAndTools": [
+        "TypeScript",
+        "React.js",
+        "Node.js",
+        "Next.js",
+        "Vercel",
+        "Supabase",
+        "MUI"
+      ]
+    },
+    {
+      "name": "playlistly",
+      "description": "Created a full-stack web application using Flask, React.js, and TypeScript to interact with the Spotify API, enabling users to generate personalized playlists with secure Spotify OAuth2 authentication and a dynamic, responsive frontend.",
+      "link": "https://github.com/PraveshKunwar/playlistly",
+      "languagesAndTools": [
+        "TypeScript",
+        "React.js",
+        "CSS",
+        "MUI",
+        "Vite",
+        "Python",
+        "Flask",
+        "Spotify's API"
+      ]
+    },
+    {
+      "name": "logify",
+      "description": "Developed a secure passwordless authentication system using Flask, featuring time-sensitive OTPs with pyotp, tokenized login links via itsdangerous, Flask-Mail integration, and a responsive Bootstrap-styled interface for a seamless and robust user experience.",
+      "link": "https://github.com/PraveshKunwar/logify",
+      "languagesAndTools": [
+        "Python",
+        "Flask",
+        "Flask-Mail",
+        "Flask-Limiter",
+        "itsdangerous",
+        "pyotp",
+        "Bootstrap"
+      ]
+    },
+    {
+      "name": "invently.ai",
+      "description": "Developed a full-stack inventory management platform using Flask and React.js with TypeScript, featuring real-time analytics, AI-powered insights, dynamic data visualizations with Chart.js, and integrated Stripe and Google Gemini APIs for subscription management and enhanced decision-making.",
+      "link": "https://github.com/PraveshKunwar/invently.ai",
+      "languagesAndTools": [
+        "TypeScript",
+        "React.js",
+        "Vite",
+        "Python",
+        "Flask",
+        "Supabase",
+        "MUI",
+        "Stripe API",
+        "Google's Gemini API",
+        "Chart.js"
+      ]
+    }
+  ]
+}

@@ -95,13 +95,6 @@ const App: React.FC = () => {
               </IconButton>
               <IconButton
                 component="a"
-                href="https://leetcode.com/u/PraveshKunwar/"
-                target="_blank"
-              >
-                <CodeIcon color="inherit" />
-              </IconButton>
-              <IconButton
-                component="a"
                 href="https://open.spotify.com/user/31hlradyl4gkqrewv634ekpuf5gm?si=0cd80758da1c4166"
                 target="_blank"
               >

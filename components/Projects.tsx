@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Typography, Box, Stack, IconButton } from "@mui/joy";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import projectData from "../data/projects.json"; // Adjust the path as needed
+import projectData from "../data/projects.json";
 
 interface Projects {
   name: string;

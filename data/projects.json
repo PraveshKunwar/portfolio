@@ -59,6 +59,22 @@
         "Google's Gemini API",
         "Chart.js"
       ]
+    },
+    {
+      "name": "Ultimatum",
+      "description": "Engineered a Discord bot using Discord.js and MongoDB to manage user preferences and server settings, deployed to 50+ servers with a dashboard for seamless command customization and enhanced usability.",
+      "link": "https://github.com/PraveshKunwar/Ultimatum",
+      "languagesAndTools": [
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "MUI",
+        "Discord.js API",
+        "MongoDB",
+        "Mongoose",
+        "Axios"
+      ]
     }
   ]
 }

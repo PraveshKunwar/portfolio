@@ -65,7 +65,7 @@ const App: React.FC = () => {
                 Pravesh Kunwar
               </Typography>
               <Typography level="body-lg" color="neutral">
-                <b>CS & EE Minor @University of Michigan</b>
+                <b>CS @University of Michigan</b>
               </Typography>
               <Typography level="body-sm" color="neutral">
                 Novi, Michigan, United States

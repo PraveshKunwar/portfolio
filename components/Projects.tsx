@@ -17,6 +17,7 @@ const Projects: React.FC = () => {
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
+        alignItems: "stretch", // Ensures cards stretch to the same height
         gap: 2,
         padding: 2,
       }}
@@ -27,8 +28,10 @@ const Projects: React.FC = () => {
             key={index}
             variant="outlined"
             sx={{
-              width: "300px",
-              minWidth: "300px",
+              flex: "1 1 calc(33% - 1rem)", // Adjust card width for side-by-side layout
+              minWidth: "250px",
+              maxWidth: "300px",
+              minHeight: "320px", // Ensures consistent height for all cards
               padding: "1.5rem",
               boxShadow: "lg",
               borderRadius: "12px",
@@ -37,6 +40,9 @@ const Projects: React.FC = () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
+              "@media (max-width: 768px)": {
+                flex: "1 1 calc(100% - 1rem)", // Stack cards on smaller screens
+              },
             }}
           >
             <Stack spacing={2} sx={{ flexGrow: 1 }}>
@@ -52,17 +58,42 @@ const Projects: React.FC = () => {
               >
                 <GitHubIcon />
               </IconButton>
-              <Typography level="h2" sx={{ fontWeight: "bold" }}>
+              <Typography
+                level="h2"
+                sx={{
+                  fontWeight: "bold",
+                  fontSize: "1.2rem",
+                }}
+              >
                 {project.name}
               </Typography>
-              <Typography level="body-md" color="neutral">
+              <Typography
+                level="body-md"
+                color="neutral"
+                sx={{
+                  fontSize: "1rem",
+                  flexGrow: 1, // Ensures the description takes up remaining space for alignment
+                }}
+              >
                 {project.description}
               </Typography>
               <Box>
-                <Typography level="body-sm" sx={{ fontWeight: "bold" }}>
+                <Typography
+                  level="body-sm"
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: "0.9rem",
+                  }}
+                >
                   Tools & Technologies:
                 </Typography>
-                <Typography level="body-sm" color="neutral">
+                <Typography
+                  level="body-sm"
+                  color="neutral"
+                  sx={{
+                    fontSize: "0.9rem",
+                  }}
+                >
                   <i>{project.languagesAndTools.join(", ")}</i>
                 </Typography>
               </Box>

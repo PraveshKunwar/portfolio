@@ -677,8 +677,7 @@ const Home: React.FC = () => {
           Structures and Algorithms, <b>EECS 370</b>: Intro to Computer
           Orginization, <b>EECS 376</b>: Foundations of Computer Science,{" "}
           <b>*EECS 481</b>: Software Engineering, <b>*EECS 484</b>: Database
-          Systems, <b>*EECS 485</b>: Web Systems, <b>*EECS 486</b>:
-          Informational Retrieval and Web Search
+          Systems, <b>*EECS 485</b>: Web Systems
         </p>
       </section>
       <section id="home-skills">

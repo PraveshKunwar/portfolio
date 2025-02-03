@@ -30,6 +30,8 @@ const App: React.FC = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          backgroundColor: "black",
+          color: "white",
         }}
         className="card-container"
       >
@@ -42,7 +44,8 @@ const App: React.FC = () => {
             padding: "1.5rem",
             boxShadow: "lg",
             borderRadius: "12px",
-            backgroundColor: "white",
+            backgroundColor: "black",
+            color: "white",
             "@media (max-width: 768px)": {
               width: "100%",
               minWidth: "300px",
@@ -56,18 +59,21 @@ const App: React.FC = () => {
         >
           <Stack spacing={2} alignItems="center">
             <Avatar
-              src={"/praveshk.png"}
-              alt="Your Name"
+              src={"/ocean.jpg"}
+              alt="Pravesh Kunwar"
               sx={{ width: 100, height: 100 }}
             />
             <Box textAlign="center">
-              <Typography level="h1" sx={{ fontWeight: "bold" }}>
+              <Typography
+                level="h1"
+                sx={{ fontWeight: "bold", color: "white" }}
+              >
                 Pravesh Kunwar
               </Typography>
-              <Typography level="body-lg" color="neutral">
-                <b>CS @University of Michigan</b>
+              <Typography level="body-lg" sx={{ color: "white" }}>
+                <b>Fullstack Developer</b>
               </Typography>
-              <Typography level="body-sm" color="neutral">
+              <Typography level="body-sm" sx={{ color: "white" }}>
                 Novi, Michigan, United States
               </Typography>
             </Box>
@@ -76,6 +82,7 @@ const App: React.FC = () => {
                 component="a"
                 href="https://www.linkedin.com/in/praveshkunwar/"
                 target="_blank"
+                sx={{ color: "white" }}
               >
                 <LinkedInIcon color="inherit" />
               </IconButton>
@@ -83,6 +90,7 @@ const App: React.FC = () => {
                 component="a"
                 href="https://github.com/PraveshKunwar"
                 target="_blank"
+                sx={{ color: "white" }}
               >
                 <GitHubIcon color="inherit" />
               </IconButton>
@@ -90,6 +98,7 @@ const App: React.FC = () => {
                 component="a"
                 href="https://www.instagram.com/pravesh.kunwar/"
                 target="_blank"
+                sx={{ color: "white" }}
               >
                 <InstagramIcon color="inherit" />
               </IconButton>
@@ -97,6 +106,7 @@ const App: React.FC = () => {
                 component="a"
                 href="https://open.spotify.com/user/31hlradyl4gkqrewv634ekpuf5gm?si=0cd80758da1c4166"
                 target="_blank"
+                sx={{ color: "white" }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -114,49 +124,57 @@ const App: React.FC = () => {
 
             {/* Hobbies or Skills with Tooltips */}
             <Box>
-              <Typography level="h4" textAlign="center" sx={{ mt: 1, mb: 1 }}>
+              <Typography
+                level="h4"
+                textAlign="center"
+                sx={{ mt: 1, mb: 1, color: "white" }}
+              >
                 Hobbies & Interests
               </Typography>
               <Stack direction="row" spacing={2} justifyContent="center">
                 <Tooltip title="I love soccer!" variant="soft">
-                  <IconButton>
+                  <IconButton sx={{ color: "white" }}>
                     <SportsSoccerIcon color="inherit" />
                   </IconButton>
                 </Tooltip>
                 <Tooltip title="I love coding challenges!" variant="soft">
-                  <IconButton>
+                  <IconButton sx={{ color: "white" }}>
                     <CodeIcon color="inherit" />
                   </IconButton>
                 </Tooltip>
                 <Tooltip title="Graduating '26!" variant="soft">
-                  <IconButton>
+                  <IconButton sx={{ color: "white" }}>
                     <SchoolIcon color="inherit" />
                   </IconButton>
-                </Tooltip>{" "}
+                </Tooltip>
               </Stack>
             </Box>
 
             {/* Navigation Links */}
             <Box>
               <Stack direction="row" spacing={2} justifyContent="center">
-                <JoyLink component={Link} to="/" color="primary">
+                <JoyLink component={Link} to="/" sx={{ color: "white" }}>
                   Home
                 </JoyLink>
-                <JoyLink component={Link} to="/books" color="primary">
+                <JoyLink component={Link} to="/books" sx={{ color: "white" }}>
                   Books
                 </JoyLink>
-                <JoyLink component={Link} to="/projects" color="primary">
+                <JoyLink
+                  component={Link}
+                  to="/projects"
+                  sx={{ color: "white" }}
+                >
                   Projects
                 </JoyLink>
-                {/* Opens PDF in a new tab */}
                 <JoyLink
                   href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  sx={{ color: "white" }}
                 >
                   Resume
                 </JoyLink>
-                <JoyLink component={Link} to="/misc" color="primary">
+                <JoyLink component={Link} to="/misc" sx={{ color: "white" }}>
                   Misc
                 </JoyLink>
               </Stack>

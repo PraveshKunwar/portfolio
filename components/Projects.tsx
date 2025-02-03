@@ -20,6 +20,8 @@ const Projects: React.FC = () => {
         alignItems: "stretch",
         gap: 2,
         padding: 2,
+        backgroundColor: "black",
+        color: "white",
       }}
     >
       {Array.isArray(projectData.projects) ? (
@@ -36,13 +38,22 @@ const Projects: React.FC = () => {
               boxShadow: "lg",
               borderRadius: "12px",
               position: "relative",
-              backgroundColor: "white",
+              backgroundColor: "black",
+              color: "white",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
+              transition: "border 0.3s ease",
+              border: "2px solid transparent",
               "@media (max-width: 768px)": {
                 flex: "1 1 calc(100% - 1rem)",
               },
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.border = "2px solid white";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.border = "2px solid transparent";
             }}
           >
             <Stack spacing={2} sx={{ flexGrow: 1 }}>
@@ -54,6 +65,7 @@ const Projects: React.FC = () => {
                   position: "absolute",
                   top: 10,
                   right: 10,
+                  color: "white",
                 }}
               >
                 <GitHubIcon />
@@ -63,16 +75,17 @@ const Projects: React.FC = () => {
                 sx={{
                   fontWeight: "bold",
                   fontSize: "1.2rem",
+                  color: "white",
                 }}
               >
                 {project.name}
               </Typography>
               <Typography
                 level="body-md"
-                color="neutral"
                 sx={{
                   fontSize: "1rem",
                   flexGrow: 1,
+                  color: "white",
                 }}
               >
                 {project.description}
@@ -83,15 +96,16 @@ const Projects: React.FC = () => {
                   sx={{
                     fontWeight: "bold",
                     fontSize: "0.9rem",
+                    color: "white",
                   }}
                 >
                   Tools & Technologies:
                 </Typography>
                 <Typography
                   level="body-sm"
-                  color="neutral"
                   sx={{
                     fontSize: "0.9rem",
+                    color: "white",
                   }}
                 >
                   <i>{project.languagesAndTools.join(", ")}</i>
@@ -101,7 +115,7 @@ const Projects: React.FC = () => {
           </Card>
         ))
       ) : (
-        <Typography level="body-lg" color="danger">
+        <Typography level="body-lg" sx={{ color: "white" }}>
           No projects found.
         </Typography>
       )}

@@ -1,7 +1,6 @@
 :root {
   font-family: "Inter", "Arial", sans-serif;
   line-height: 1.6;
-  font-weight: 400;
 
   color-scheme: dark;
   color: #e0e7ff;
@@ -59,6 +58,10 @@ button {
   transition: all 0.3s ease;
 }
 
+p {
+  font-weight: 300;
+}
+
 button:hover {
   background-color: #2a3e5f;
   border-color: #7faaff;
@@ -82,9 +85,9 @@ button:hover {
 }
 
 .card-container {
-  position: relative; /* Prevent it from overlapping other elements */
-  z-index: 2; /* Ensure it appears above other elements */
-  margin-bottom: 2rem; /* Add spacing below the card */
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2rem;
 }
 
 .home-section {
@@ -96,21 +99,31 @@ button:hover {
 
 .home-grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 4rem; /* Increased spacing between sections */
-  max-width: 1200px; /* Adjust as needed */
-  margin: 0 auto; /* Center the container */
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .home-paragraph,
-.home-classes-courses {
+.home-education {
   text-align: left;
   font-size: medium;
 }
 
+#home-edu-dates {
+  font-weight: 200;
+  font-size: small;
+}
+
 @media (max-width: 768px) {
   .home-grid-container {
-    grid-template-columns: 1fr; /* Stack sections vertically on smaller screens */
-    gap: 2rem; /* Adjust spacing for smaller screens */
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .home-paragraph,
+  .home-education {
+    text-align: center;
+    font-size: medium;
   }
 }

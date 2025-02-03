@@ -122,7 +122,6 @@ const App: React.FC = () => {
               </IconButton>
             </Stack>
 
-            {/* Hobbies or Skills with Tooltips */}
             <Box>
               <Typography
                 level="h4"
@@ -150,7 +149,6 @@ const App: React.FC = () => {
               </Stack>
             </Box>
 
-            {/* Navigation Links */}
             <Box>
               <Stack direction="row" spacing={2} justifyContent="center">
                 <JoyLink component={Link} to="/" sx={{ color: "white" }}>
@@ -182,7 +180,6 @@ const App: React.FC = () => {
           </Stack>
         </Card>
 
-        {/* Define Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Books />} />

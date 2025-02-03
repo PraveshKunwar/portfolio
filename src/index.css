@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: dark;
-  color: #e0e7ff; /* Soft white-blue for text */
+  color: #e0e7ff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #1f1c1c; /* Consistent dark background */
+  background-color: black;
   color: white;
   padding: 1.5rem;
 }
@@ -37,7 +37,7 @@ h4 {
 }
 
 a {
-  color: #4f80ff; /* Accent blue for links */
+  color: #4f80ff;
   text-decoration: none;
   font-weight: 500;
 }
@@ -48,7 +48,7 @@ a:hover {
 }
 
 button {
-  background-color: #1b2e4b; /* Darker button background */
+  background-color: #1b2e4b;
   color: #e0e7ff;
   border: 1px solid #4f80ff;
   padding: 0.5rem 1.2rem;
@@ -67,7 +67,7 @@ button:hover {
 .resume-container {
   max-width: 800px;
   padding: 2rem;
-  background-color: #0f1b36; /* Slightly brighter midnight blue */
+  background-color: #0f1b36;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
@@ -80,29 +80,37 @@ button:hover {
     font-size: 2.2em;
   }
 }
-.home-section {
-  position: relative; /* Ensure it stays within normal flow */
-  z-index: 1; /* Keeps it above background elements */
-  margin-top: 2rem; /* Add margin to avoid overlapping with the card */
-  text-align: center;
-  justify-content: left;
-}
 
 .card-container {
   position: relative; /* Prevent it from overlapping other elements */
   z-index: 2; /* Ensure it appears above other elements */
   margin-bottom: 2rem; /* Add spacing below the card */
 }
-.home-paragraph {
-  text-align: left; /* Align text to the left */
-  font-size: medium; /* Keep the text readable */
-  max-width: 600px; /* Restrict the paragraph width */
-  margin: 0 auto; /* Center the paragraph block within its container */
+
+.home-section {
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+  text-align: center;
 }
 
+.home-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 4rem; /* Increased spacing between sections */
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container */
+}
+
+.home-paragraph,
 .home-classes-courses {
-  text-align: left; /* Align text to the left */
-  font-size: medium; /* Keep the text readable */
-  max-width: 600px; /* Restrict the paragraph width */
-  margin: 0 auto; /* Center the paragraph block within its container */
+  text-align: left;
+  font-size: medium;
+}
+
+@media (max-width: 768px) {
+  .home-grid-container {
+    grid-template-columns: 1fr; /* Stack sections vertically on smaller screens */
+    gap: 2rem; /* Adjust spacing for smaller screens */
+  }
 }

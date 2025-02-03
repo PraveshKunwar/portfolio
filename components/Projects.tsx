@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
-        alignItems: "stretch", // Ensures cards stretch to the same height
+        alignItems: "stretch",
         gap: 2,
         padding: 2,
       }}
@@ -28,10 +28,10 @@ const Projects: React.FC = () => {
             key={index}
             variant="outlined"
             sx={{
-              flex: "1 1 calc(33% - 1rem)", // Adjust card width for side-by-side layout
+              flex: "1 1 calc(33% - 1rem)",
               minWidth: "250px",
               maxWidth: "300px",
-              minHeight: "320px", // Ensures consistent height for all cards
+              minHeight: "320px",
               padding: "1.5rem",
               boxShadow: "lg",
               borderRadius: "12px",
@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
               flexDirection: "column",
               justifyContent: "space-between",
               "@media (max-width: 768px)": {
-                flex: "1 1 calc(100% - 1rem)", // Stack cards on smaller screens
+                flex: "1 1 calc(100% - 1rem)",
               },
             }}
           >
@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
                 color="neutral"
                 sx={{
                   fontSize: "1rem",
-                  flexGrow: 1, // Ensures the description takes up remaining space for alignment
+                  flexGrow: 1,
                 }}
               >
                 {project.description}

@@ -111,19 +111,49 @@ button:hover {
   font-size: medium;
 }
 
-#home-edu-dates {
+#home-dates {
   font-weight: 200;
   font-size: small;
 }
 
-@media (max-width: 768px) {
+#home-edu-major,
+#home-job-titles,
+#home-job-desc {
+  font-weight: 400;
+  font-size: small;
+}
+
+@media (max-width: 830px) {
+  .home-grid-container {
+    padding: 0 1rem;
+  }
   .home-grid-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
   }
   .home-paragraph,
   .home-education {
-    text-align: center;
+    text-align: left;
     font-size: medium;
+  }
+  #home-about-me,
+  #home-classes {
+    text-align: center;
+  }
+}
+
+@media (max-width: 850px) {
+  .home-grid-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .home-paragraph,
+  .home-education {
+    text-align: left;
+    font-size: medium;
+  }
+  #home-about-me,
+  #home-classes {
+    text-align: center;
   }
 }

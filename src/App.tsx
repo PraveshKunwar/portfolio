@@ -45,6 +45,7 @@ const App: React.FC = () => {
             boxShadow: "lg",
             borderRadius: "12px",
             backgroundColor: "black",
+            border: "none",
             color: "white",
             "@media (max-width: 768px)": {
               width: "100%",
@@ -54,6 +55,10 @@ const App: React.FC = () => {
               position: "relative",
               top: "auto",
               padding: "1rem",
+            },
+            "&:hover .name": {
+              color: "#4f80ff", // Change name color to blue on hover
+              transition: "color 0.3s linear", // Add linear transition
             },
           }}
         >
@@ -66,6 +71,7 @@ const App: React.FC = () => {
             <Box textAlign="center">
               <Typography
                 level="h1"
+                className="name"
                 sx={{ fontWeight: "bold", color: "white" }}
               >
                 Pravesh Kunwar

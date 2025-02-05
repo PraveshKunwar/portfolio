@@ -1,12 +1,13 @@
 import React from "react";
-import { Card, Typography, Box, Stack, IconButton, Avatar } from "@mui/joy";
+import { Card, Typography, Box, Stack, Link } from "@mui/joy";
+import Rating from "@mui/material/Rating";
 import booksData from "../data/books.json";
 
 interface Books {
   name: string;
   author: string;
   description: string;
-  rating: string;
+  rating: number; // Updated to number for Rating component
   url: string;
   link: string;
 }
@@ -49,28 +50,46 @@ const Books: React.FC = () => {
             }}
           >
             <Stack spacing={2}>
-              <IconButton
-                href={book.link}
-                component="a"
-                target="_blank"
+              <Box
+                component="img"
+                src={book.url}
+                alt={book.name}
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                  maxHeight: "200px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <Box
                 sx={{
                   position: "absolute",
                   top: 10,
                   right: 10,
-                  color: "white",
+                  backgroundColor: "rgba(0, 0, 0, 0.7)",
+                  padding: "4px 8px",
+                  borderRadius: "12px",
                 }}
               >
-                <Avatar src={book.url} />
-              </IconButton>
+                <Rating
+                  name="read-only"
+                  value={book.rating}
+                  precision={0.5}
+                  readOnly
+                />
+              </Box>
               <Typography
                 level="h2"
-                sx={{ fontWeight: "bold", color: "white" }}
+                sx={{ fontWeight: "bold", color: "white", mt: 1 }}
               >
                 {book.name}
               </Typography>
               <Typography level="body-md" sx={{ color: "white" }}>
                 By: {book.author}
               </Typography>
+
+              {/* Book Description */}
               <Box>
                 <Typography
                   level="body-sm"
@@ -81,13 +100,24 @@ const Books: React.FC = () => {
                 <Typography level="body-sm" sx={{ color: "white" }}>
                   <i>{book.description}</i>
                 </Typography>
-                <Typography
-                  level="body-sm"
-                  sx={{ fontWeight: "bold", color: "white" }}
-                >
-                  Rating: {book.rating}
-                </Typography>
               </Box>
+
+              {/* "View More" Link */}
+              <Link
+                href={book.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  color: "#4f80ff",
+                  textDecoration: "none",
+                  fontWeight: "500",
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                }}
+              >
+                View More
+              </Link>
             </Stack>
           </Card>
         ))

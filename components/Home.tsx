@@ -1,49 +1,64 @@
 import React, { useState } from "react";
-import "../src/index.css";
+import { Card, Typography, Box, Stack, Button } from "@mui/joy";
 import { courses } from "../data/Courses";
+import "../src/index.css";
 
 const Home: React.FC = () => {
   const initialCourseCount = 5;
   const [showAllCourses, setShowAllCourses] = useState<boolean>(false);
 
   return (
-    <div
-      className="home-section"
-      style={{
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "stretch",
+        gap: 2,
+        padding: 2,
         backgroundColor: "black",
         color: "white",
       }}
     >
-      <div
-        className="home-grid-container"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "2rem",
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "2rem",
+      <Card
+        variant="outlined"
+        sx={{
+          flex: "1 1 calc(50% - 1rem)",
+          minWidth: "250px",
+          maxWidth: "600px",
+          padding: "1.5rem",
+          boxShadow: "lg",
+          borderRadius: "12px",
+          backgroundColor: "black",
+          color: "white",
+          transition: "border 0.3s ease",
+          border: "2px solid transparent",
+          "@media (max-width: 850px)": {
+            flex: "1 1 calc(100% - 1rem)",
+          },
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.border = "2px solid white";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.border = "2px solid transparent";
         }}
       >
-        <section
-          id="home-about-me"
-          style={{
-            borderRadius: "12px",
-            padding: "1.5rem",
-            transition: "border 0.3s ease",
-            border: "2px solid transparent",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.border = "2px solid white";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.border = "2px solid transparent";
-          }}
-        >
-          <h2 style={{ color: "white" }}>About Me:</h2>
-          <p
-            className="home-paragraph"
-            style={{
+        <Stack spacing={2}>
+          <Typography
+            level="h2"
+            sx={{
+              fontWeight: "bold",
+              fontSize: "1.5rem",
+              color: "white",
+            }}
+          >
+            About Me:
+          </Typography>
+          <Typography
+            level="body-md"
+            sx={{
+              fontSize: "1rem",
               color: "white",
             }}
           >
@@ -54,38 +69,63 @@ const Home: React.FC = () => {
             innovation and collaboration are encouraged. I love the challenge of
             solving complex problems and enjoy working on projects that make a
             meaningful impact in any area that is involved.
-          </p>
-        </section>
+          </Typography>
+        </Stack>
+      </Card>
 
-        <section
-          id="home-classes"
-          style={{
-            borderRadius: "12px",
-            padding: "1.5rem",
-            transition: "border 0.3s ease",
-            border: "2px solid transparent",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.border = "2px solid white";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.border = "2px solid transparent";
-          }}
-        >
-          <h2 style={{ color: "white" }}>Education:</h2>
-          <p
-            className="home-education"
-            style={{
+      <Card
+        variant="outlined"
+        sx={{
+          flex: "1 1 calc(50% - 1rem)",
+          minWidth: "250px",
+          maxWidth: "600px",
+          padding: "1.5rem",
+          boxShadow: "lg",
+          borderRadius: "12px",
+          backgroundColor: "black",
+          color: "white",
+          transition: "border 0.3s ease",
+          border: "2px solid transparent",
+          "@media (max-width: 850px)": {
+            flex: "1 1 calc(100% - 1rem)",
+          },
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.border = "2px solid white";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.border = "2px solid transparent";
+        }}
+      >
+        <Stack spacing={2}>
+          <Typography
+            level="h2"
+            sx={{
+              fontWeight: "bold",
+              fontSize: "1.5rem",
+              color: "white",
+            }}
+          >
+            Education:
+          </Typography>
+          <Typography
+            level="body-md"
+            sx={{
+              fontSize: "1rem",
               color: "white",
             }}
           >
             <b>University of Michigan - Ann Arbor</b>
             <br />
-            <b id="home-edu-dates">Jan. 2024 - May. 2026</b>
+            <i id="home-edu-major">B.S Computer Science</i>
+            <br />
+            <b id="home-dates">Jan. 2024 - May. 2026</b>
             <br />
             <b>Oakland Community College</b>
             <br />
-            <b id="home-edu-dates">Jun. 2022 - Aug. 2023</b>
+            <i id="home-edu-major">Transferred, General Studies</i>
+            <br />
+            <b id="home-dates">Jun. 2022 - Aug. 2023</b>
             <br />
             <b>Relevant Courses</b>
             <br />
@@ -99,11 +139,11 @@ const Home: React.FC = () => {
                       1 && ", "}
                 </span>
               ))}
-          </p>
+          </Typography>
           {courses.length > initialCourseCount && (
-            <button
+            <Button
               onClick={() => setShowAllCourses(!showAllCourses)}
-              style={{
+              sx={{
                 background: "none",
                 border: "none",
                 color: "#4f80ff",
@@ -114,78 +154,83 @@ const Home: React.FC = () => {
               }}
             >
               {showAllCourses ? "Show Less" : "Read More"}
-            </button>
+            </Button>
           )}
-        </section>
-      </div>
-      {/*
-      <section id="home-skills">
-        <h2>Skills:</h2>
-        <h4>Here are the languages and tools that I've used!</h4>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "20px",
-            flexWrap: "wrap",
-          }}
-        >
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              style={{
-                position: "relative",
-                display: "inline-block",
-                textAlign: "center",
-              }}
-            >
-              <div
-                style={{
-                  position: "absolute",
-                  top: "-30px",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  background: "rgba(0, 0, 0, 0.8)",
-                  color: "white",
-                  padding: "5px 10px",
-                  borderRadius: "5px",
-                  opacity: 0,
-                  transition: "opacity 0.3s ease",
-                  pointerEvents: "none",
-                }}
-                className="tooltip"
-              >
-                {skill.language}
-              </div>
-              <div
-                style={{
-                  cursor: "pointer",
-                  transition: "transform 0.3s ease",
-                }}
-                onMouseEnter={(e) =>
-                  ((
-                    (e.currentTarget.parentNode as HTMLElement).querySelector(
-                      ".tooltip"
-                    ) as HTMLElement
-                  ).style.opacity = "1")
-                }
-                onMouseLeave={(e) =>
-                  ((
-                    (e.currentTarget.parentNode as HTMLElement).querySelector(
-                      ".tooltip"
-                    ) as HTMLElement
-                  ).style.opacity = "0")
-                }
-              >
-                {skill.svg}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-      */}
-    </div>
+        </Stack>
+      </Card>
+
+      <Card
+        variant="outlined"
+        sx={{
+          flex: "1 1 calc(50% - 1rem)",
+          minWidth: "250px",
+          maxWidth: "600px",
+          padding: "1.5rem",
+          boxShadow: "lg",
+          borderRadius: "12px",
+          backgroundColor: "black",
+          color: "white",
+          transition: "border 0.3s ease",
+          border: "2px solid transparent",
+          "@media (max-width: 850px)": {
+            flex: "1 1 calc(100% - 1rem)",
+          },
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.border = "2px solid white";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.border = "2px solid transparent";
+        }}
+      >
+        <Stack spacing={2}>
+          <Typography
+            level="h2"
+            sx={{
+              fontWeight: "bold",
+              fontSize: "1.5rem",
+              color: "white",
+            }}
+          >
+            Experience:
+          </Typography>
+          <Typography
+            level="body-md"
+            sx={{
+              fontSize: "1rem",
+              color: "white",
+            }}
+          >
+            <b>Michigan Hackers</b>
+            <br />
+            <b id="home-job-titles">
+              Software Engineer & Advanced Web Development Team Lead
+            </b>
+            <br />
+            <b id="home-dates">Aug. 2024 - Present</b>
+            <br />
+            <i id="home-job-desc">
+              Teaching students the fundamentals of fullstack development, while
+              fostering a collaborative enviornment to create meaningful
+              projects.
+            </i>
+            <br /> <br />
+            <b>Michigan Data Science Team</b>
+            <br />
+            <b id="home-job-titles">Data Analyst</b>
+            <br />
+            <b id="home-dates">Jan. 2024 - Apr. 2024</b>
+            <br />
+            <i id="home-job-desc">
+              Utilized Spotify’s API to analyze user data, uncovering trends
+              like top artists, favorite tracks, and listening patterns,
+              providing actionable insights to enhance the music discovery
+              experience.
+            </i>
+          </Typography>
+        </Stack>
+      </Card>
+    </Box>
   );
 };
 

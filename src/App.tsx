@@ -57,8 +57,8 @@ const App: React.FC = () => {
               padding: "1rem",
             },
             "&:hover .name": {
-              color: "#4f80ff", // Change name color to blue on hover
-              transition: "color 0.3s linear", // Add linear transition
+              color: "#4f80ff",
+              transition: "color 0.3s linear",
             },
           }}
         >
@@ -66,7 +66,7 @@ const App: React.FC = () => {
             <Avatar
               src={"/ocean.jpg"}
               alt="Pravesh Kunwar"
-              sx={{ width: 100, height: 100 }}
+              sx={{ width: 256, height: 256}}
             />
             <Box textAlign="center">
               <Typography

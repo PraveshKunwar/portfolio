@@ -78,7 +78,7 @@
     },
     {
       "name": "Ineed.io",
-      "description": "led the design and development of an \"Internship Tracker\" platform to help students crush their internship hunt.  It features a central dashboard, cool progress graphs (like on GitHub), interview prep tools, and even some fun game-like features like leaderboards and KD ratios to keep things interesting.  The whole point is to make applying for internships way easier and more effective, with personalized reminders, smart internship suggestions, and analytics to track how they're doing.",
+      "description": "led the design and development of an \"Internship Tracker\" platform to help students crush their internship hunt.  It features a central dashboard, cool progress graphs (like on GitHub), interview prep tools, and even some fun game-like features like leaderboards and KD ratios to keep things interesting.",
       "link": "https://github.com/InNeed-io/web",
       "languagesAndTools": [
         "TypeScript",
@@ -87,6 +87,7 @@
         "Node.js",
         "Vercel",
         "Supabase",
+        "Figma",
         "Tailwind CSS",
         "shadcn/ui"
       ]

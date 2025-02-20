@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Card, Typography, Box, Stack, Button } from "@mui/joy";
 import { courses } from "../data/Courses";
 import "../src/index.css";
-import Projects from "./Projects";
-
 const Home: React.FC = () => {
   const initialCourseCount = 5;
   const [showAllCourses, setShowAllCourses] = useState<boolean>(false);
@@ -135,7 +133,7 @@ const Home: React.FC = () => {
             {courses
               .slice(0, showAllCourses ? courses.length : initialCourseCount)
               .map((course, index) => (
-                <span key={index}>
+                <span key={index} id="home-edu-courses">
                   {course}
                   {index <
                     (showAllCourses ? courses.length : initialCourseCount) -
@@ -278,19 +276,18 @@ const Home: React.FC = () => {
             <b>Languages</b>
             <br />
             <b id="home-job-titles">
-            HTML, CSS, JavaScript, TypeScript, Python, C, C++, SQL
+              HTML, CSS, JavaScript, TypeScript, Python, C, C++, SQL
             </b>
             <br /> <br />
             <b>Frameworks</b>
             <br />
-            <b id="home-job-titles">
-            React.js, Next.js, Node.js, Vite, Flask
-            </b>
+            <b id="home-job-titles">React.js, Next.js, Node.js, Vite, Flask</b>
             <br /> <br />
             <b>Libraries</b>
             <br />
             <b id="home-job-titles">
-            Tailwind CSS, Sass, Material UI, Bootstrap, MongoDB, Supabase, Firebase, SQLite, MySQL, Redux
+              Tailwind CSS, Sass, Material UI, Bootstrap, MongoDB, Supabase,
+              Firebase, SQLite, MySQL, Redux
             </b>
             <br /> <br />
           </Typography>

@@ -118,7 +118,8 @@ button:hover {
 
 #home-edu-major,
 #home-job-titles,
-#home-job-desc {
+#home-job-desc,
+#home-edu-courses {
   font-weight: 400;
   font-size: small;
 }

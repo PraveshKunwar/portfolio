@@ -66,7 +66,7 @@ const App: React.FC = () => {
             <Avatar
               src={"/ocean.jpg"}
               alt="Pravesh Kunwar"
-              sx={{ width: 256, height: 256}}
+              sx={{ width: 256, height: 256 }}
             />
             <Box textAlign="center">
               <Typography
@@ -160,9 +160,11 @@ const App: React.FC = () => {
                 <JoyLink component={Link} to="/" sx={{ color: "white" }}>
                   Home
                 </JoyLink>
+                {/* 
                 <JoyLink component={Link} to="/books" sx={{ color: "white" }}>
                   Books
                 </JoyLink>
+                */}
                 <JoyLink
                   component={Link}
                   to="/projects"

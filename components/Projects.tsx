@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Typography, Box, Stack, IconButton } from "@mui/joy";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { Link as LinkIcon } from "@mui/icons-material";
 import projectData from "../data/projects.json";
 
 interface Projects {
@@ -8,6 +9,7 @@ interface Projects {
   description: string;
   link: string;
   languagesAndTools: string[];
+  deployedLink?: string;
 }
 
 const Projects: React.FC = () => {
@@ -57,19 +59,34 @@ const Projects: React.FC = () => {
             }}
           >
             <Stack spacing={2} sx={{ flexGrow: 1 }}>
-              <IconButton
-                component="a"
-                href={project.link}
-                target="_blank"
+              <Box
                 sx={{
                   position: "absolute",
                   top: 10,
                   right: 10,
-                  color: "white",
+                  display: "flex",
+                  gap: 1,
                 }}
               >
-                <GitHubIcon />
-              </IconButton>
+                <IconButton
+                  component="a"
+                  href={project.link}
+                  target="_blank"
+                  sx={{ color: "white" }}
+                >
+                  <GitHubIcon />
+                </IconButton>
+                {project.deployedLink && (
+                  <IconButton
+                    component="a"
+                    href={project.deployedLink}
+                    target="_blank"
+                    sx={{ color: "white" }}
+                  >
+                    <LinkIcon />
+                  </IconButton>
+                )}
+              </Box>
               <Typography
                 level="h2"
                 sx={{

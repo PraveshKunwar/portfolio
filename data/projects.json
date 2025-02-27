@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "name": "Ineed.io",
+      "description": "led the design and development of an \"Internship Tracker\" platform to help students crush their internship hunt.  It features a central dashboard, cool progress graphs (like on GitHub), interview prep tools, and even some fun game-like features like leaderboards and KD ratios to keep things interesting.",
+      "link": "https://github.com/InNeed-io/web",
+      "deployedLink": "https://ineedio.vercel.app/",
+      "languagesAndTools": [
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Vercel",
+        "Supabase",
+        "Figma",
+        "Tailwind CSS",
+        "shadcn/ui"
+      ]
+    },
+    {
       "name": "findBlue",
       "description": "Developed a networking platform for University of Michigan students and professors to connect through research, projects, and internships, featuring a responsive React.js frontend, secure login, and Supabase-managed data storage.",
       "link": "https://github.com/findBlueUofM/web",
@@ -74,22 +91,6 @@
         "MongoDB",
         "Mongoose",
         "Axios"
-      ]
-    },
-    {
-      "name": "Ineed.io",
-      "description": "led the design and development of an \"Internship Tracker\" platform to help students crush their internship hunt.  It features a central dashboard, cool progress graphs (like on GitHub), interview prep tools, and even some fun game-like features like leaderboards and KD ratios to keep things interesting.",
-      "link": "https://github.com/InNeed-io/web",
-      "languagesAndTools": [
-        "TypeScript",
-        "React.js",
-        "Next.js",
-        "Node.js",
-        "Vercel",
-        "Supabase",
-        "Figma",
-        "Tailwind CSS",
-        "shadcn/ui"
       ]
     }
   ]

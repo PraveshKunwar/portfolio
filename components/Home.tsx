@@ -118,7 +118,7 @@ const Home: React.FC = () => {
             <br />
             <i id="home-edu-major">B.S Computer Science</i>
             <br />
-            <b id="home-dates">Jan. 2024 - May. 2026</b>
+            <b id="home-dates">Jan. 2024 - May 2026</b>
             <br />
             <br />
             <b>Oakland Community College</b>
@@ -126,6 +126,13 @@ const Home: React.FC = () => {
             <i id="home-edu-major">Transferred, General Studies</i>
             <br />
             <b id="home-dates">Jun. 2022 - Aug. 2023</b>
+            <br />
+            <br />
+            <b>Walled Lake Western High School</b>
+            <br />
+            <i id="home-edu-major">High School Diploma</i>
+            <br />
+            <b id="home-dates">Sep. 2018 - May 2022</b>
             <br />
             <br />
             <b>Relevant Courses</b>
@@ -279,15 +286,18 @@ const Home: React.FC = () => {
               HTML, CSS, JavaScript, TypeScript, Python, C, C++, SQL
             </b>
             <br /> <br />
-            <b>Frameworks</b>
-            <br />
-            <b id="home-job-titles">React.js, Next.js, Node.js, Vite, Flask</b>
-            <br /> <br />
-            <b>Libraries</b>
+            <b>Frameworks/Technologies</b>
             <br />
             <b id="home-job-titles">
-              Tailwind CSS, Sass, Material UI, Bootstrap, MongoDB, Supabase,
-              Firebase, SQLite, MySQL, Redux
+              React.js, Next.js, Node.js, Vite, Flask, GraphQL, Tailwind CSS,
+              Sass, Material UI, Bootstrap, MongoDB, Supabase, Firebase, SQLite,
+              MySQL, Redux, Docker
+            </b>
+            <br /> <br />
+            <b>Developer Tools</b>
+            <br />
+            <b id="home-job-titles">
+              VS Code, GitHub, Vercel, AWS, Heroku, Figma
             </b>
             <br /> <br />
           </Typography>

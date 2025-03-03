@@ -92,6 +92,22 @@
         "Mongoose",
         "Axios"
       ]
+    },
+    {
+      "name": "GemRag",
+      "description": "GemRag is an AI-powered document assistant built with Python and LangChain, utilizing Google Generative AI for smart querying and Chroma for vector storage. It processes PDFs with PyPDFLoader and UnstructuredPDFLoader (OCR-enabled), while pdf2image and PIL extract images, handled concurrently via Concurrent Futures. This multimodal approach, backed by SQLite and Logging, delivers precise text for enhanced document interaction.",
+      "link": "https://github.com/PraveshKunwar/gemrag",
+      "languagesAndTools": [
+        "Python",
+        "LangChain",
+        "Google Generative AI,",
+        "Chroma",
+        "PyPDFLoader",
+        "UnstructuredPDFLoader",
+        "pdf2image",
+        "PIL",
+        "SQLite"
+      ]
     }
   ]
 }

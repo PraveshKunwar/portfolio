@@ -1,5 +1,5 @@
 :root {
-  font-family: "Inter", "Arial", sans-serif;
+  font-family: "Noto Sans Mono", "Inter", "Arial", sans-serif;
   line-height: 1.6;
 
   color-scheme: dark;
@@ -18,7 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: black;
+  background-color: #121212;
   color: white;
   padding: 1.5rem;
 }

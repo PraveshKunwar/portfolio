@@ -21,7 +21,7 @@ const Books: React.FC = () => {
         justifyContent: "center",
         gap: 2,
         padding: 2,
-        backgroundColor: "black",
+        backgroundColor: "#121212",
         color: "white",
       }}
     >
@@ -37,7 +37,7 @@ const Books: React.FC = () => {
               boxShadow: "lg",
               borderRadius: "12px",
               position: "relative",
-              backgroundColor: "black",
+              backgroundColor: "#121212",
               color: "white",
               transition: "border 0.3s ease",
               border: "2px solid transparent",

@@ -7,20 +7,20 @@ import {
   Box,
   Stack,
   Link as JoyLink,
-  Tooltip,
+  // Tooltip,
   IconButton,
 } from "@mui/joy";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
-import CodeIcon from "@mui/icons-material/Code";
-import SchoolIcon from "@mui/icons-material/School";
+// import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
+// import CodeIcon from "@mui/icons-material/Code";
+// import SchoolIcon from "@mui/icons-material/School";
 
 import Home from "../components/Home";
 import Books from "../components/Books";
 import Projects from "../components/Projects";
-import Misc from "../components/Misc";
+// import Misc from "../components/Misc";
 
 const App: React.FC = () => {
   return (
@@ -30,7 +30,7 @@ const App: React.FC = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          backgroundColor: "black",
+          backgroundColor: "#121212",
           color: "white",
         }}
         className="card-container"
@@ -44,7 +44,7 @@ const App: React.FC = () => {
             padding: "1.5rem",
             boxShadow: "lg",
             borderRadius: "12px",
-            backgroundColor: "black",
+            backgroundColor: "#121212",
             border: "none",
             color: "white",
             "@media (max-width: 768px)": {
@@ -128,6 +128,7 @@ const App: React.FC = () => {
               </IconButton>
             </Stack>
 
+            {/* 
             <Box>
               <Typography
                 level="h4"
@@ -154,6 +155,7 @@ const App: React.FC = () => {
                 </Tooltip>
               </Stack>
             </Box>
+            */}
 
             <Box>
               <Stack direction="row" spacing={2} justifyContent="center">
@@ -180,9 +182,11 @@ const App: React.FC = () => {
                 >
                   Resume
                 </JoyLink>
+                {/*
                 <JoyLink component={Link} to="/misc" sx={{ color: "white" }}>
                   Misc
                 </JoyLink>
+                */}
               </Stack>
             </Box>
           </Stack>
@@ -192,7 +196,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Books />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/misc" element={<Misc />} />
+          {/* <Route path="/misc" element={<Misc />} /> */}
         </Routes>
       </div>
     </Router>

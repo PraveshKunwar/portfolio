@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
         alignItems: "stretch",
         gap: 2,
         padding: 2,
-        backgroundColor: "black",
+        backgroundColor: "#121212",
         color: "white",
       }}
     >
@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
               boxShadow: "lg",
               borderRadius: "12px",
               position: "relative",
-              backgroundColor: "black",
+              backgroundColor: "#121212",
               color: "white",
               display: "flex",
               flexDirection: "column",
